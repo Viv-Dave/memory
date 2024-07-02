@@ -2,7 +2,7 @@ const array = [
     {
         "id": 0,
         "title": "Guts",
-        "image":"src/BerserkImages/GutsClr.png"
+        "image":"BerserkImages/GutsClr.png"
     },
     {
         "id": 1,
