@@ -61,5 +61,4 @@ const array = [
         "image": SilatImg
     }
 ];
-
 export default array;

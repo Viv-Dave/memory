@@ -23,7 +23,7 @@ export default function DisplayScore({ count }) {
                 <div className="rulesDropdown">
                     <h4>Game Rules:</h4>
                     <p>1. Click on a card and try to remember it.</p>
-                    <p>2. Don't click on the same card more than once.</p>
+                    <p>2. Do not click on the same card more than once.</p>
                     <p>3. The game shuffles the cards after each click.</p>
                     <p>4. The game resets if you click on any card more than once.</p>
                     <p>5. Aim for the highest score by remembering the cards!</p>
