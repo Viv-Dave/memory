@@ -4,7 +4,7 @@
    justify-content: center;
    align-items: center;
    display: flex;
-   background-image: url(src/BerserkImages/DarkCastle.jpg);
+   background-image: url(../../public/assets/BerserkImages/DarkCastle.jpg);
    background-size:auto;
    background-repeat: no-repeat;
    margin-right: -20px;
@@ -13,7 +13,7 @@
     body {
         display: flex;
         flex-direction: column;
-        background-image: url(src/BerserkImages/DarkCastle.jpg);
+        background-image: url(../../public/assets/BerserkImages/DarkCastle.jpg);
         background-size:auto;
         background-repeat: repeat;
     }

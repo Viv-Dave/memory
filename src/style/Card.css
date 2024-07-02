@@ -1,13 +1,3 @@
-@keyframes closeAnimation {
-    from {
-        height: 300px; /* Starting height */
-        opacity: 1; /* Full opacity */
-    }
-    to {
-        height: 0;
-        opacity: 0; /* Fade out effect */
-    }
-}
 .Card {
     position: relative;
     width: 200px;
@@ -104,7 +94,7 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url(src/BerserkImages/Rocks.jpg);
+    background-image: url(../../public/assets/BerserkImages/Rocks.jpg);
     color: #fff;
     margin-top: -10px;
     padding: 10px;

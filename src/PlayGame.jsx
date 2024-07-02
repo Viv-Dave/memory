@@ -50,7 +50,7 @@ export default function PlayGame({count, setCount}) {
                         title={item.title}
                     >
                         <div>
-                            <img src="src/BerserkImages/RoyalFrameBG.png" alt="" className='frame'/>
+                            <img src="../public/assets/BerserkImages/RoyalFrameBG.png" alt="" className='frame'/>
                             <img src={item.image} alt={item.title} className='image'/>
                         </div>
                     </div>

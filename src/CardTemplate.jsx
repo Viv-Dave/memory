@@ -1,53 +1,65 @@
+import GutsImg from '../public/assets/BerserkImages/GutsClr.png';
+import GriffithImg from '../public/assets/BerserkImages/GriffithClr.png';
+import CascaImg from '../public/assets/BerserkImages/CascaClr.png';
+import SkullKnightImg from '../public/assets/BerserkImages/SkullKnightClr.webp';
+import BehelitImg from '../public/assets/BerserkImages/BehelitClr.webp';
+import GanishkaImg from '../public/assets/BerserkImages/GanishkaClr.webp';
+import RakshasaImg from '../public/assets/BerserkImages/RakshasaClr.webp';
+import ZoddImg from '../public/assets/BerserkImages/ZoddClr2.webp';
+import VoidImg from '../public/assets/BerserkImages/VoidClr.webp';
+import SilatImg from '../public/assets/BerserkImages/SilatClr.jpg';
+
 const array = [
     {
         "id": 0,
         "title": "Guts",
-        "image":"src/BerserkImages/GutsClr.png"
+        "image": GutsImg
     },
     {
         "id": 1,
         "title": "Griffith",
-        "image":"src/BerserkImages/GriffithClr.png"
+        "image": GriffithImg
     },
     {
         "id": 2,
         "title":"Casca",
-        "image":"src/BerserkImages/CascaClr.png"
+        "image": CascaImg
     },
     {
-        "id":3,
+        "id": 3,
         "title":"Skull Knight",
-        "image":"src/BerserkImages/SkullKnightClr.webp"
+        "image": SkullKnightImg
     },
     {
-        "id":4,
+        "id": 4,
         "title":"Behelit",
-        "image":"src/BerserkImages/BehelitClr.webp"
+        "image": BehelitImg
     },
     {
-        "id":5,
+        "id": 5,
         "title":"Ganishka",
-        "image":"src/BerserkImages/GanishkaClr.webp"
+        "image": GanishkaImg
     }, 
     {
-        "id":6,
+        "id": 6,
         "title":"Rakshasa",
-        "image":"src/BerserkImages/RakshasaClr.webp"
+        "image": RakshasaImg
     }, 
     {
-        "id":7,
+        "id": 7,
         "title": "Zodd",
-        "image":"src/BerserkImages/ZoddClr2.webp"
+        "image": ZoddImg
     },
     {
-        "id":8,
+        "id": 8,
         "title": "Void",
-        "image":"src/BerserkImages/VoidClr.webp"
+        "image": VoidImg
     }, 
     {
         "id": 9,
         "title": "Silat",
-        "image":"src/BerserkImages/SilatClr.jpg"
-    }, 
+        "image": SilatImg
+    }
 ];
-export default array
+
+export default array;
