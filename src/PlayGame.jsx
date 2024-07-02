@@ -1,7 +1,7 @@
 import './style/Card.css';
 import { useState, useEffect } from 'react';
 import array from './CardTemplate';
-
+import FrameImg from '../public/assets/BerserkImages/RoyalFrameBG.png'
 export default function PlayGame({count, setCount}) {
     const [clicked, setClicked] = useState(new Array(array.length).fill(0));
     const [shuffledArray, setShuffledArray] = useState([...array].sort(() => Math.random() - 0.5));
@@ -50,7 +50,7 @@ export default function PlayGame({count, setCount}) {
                         title={item.title}
                     >
                         <div>
-                            <img src="../public/assets/BerserkImages/RoyalFrameBG.png" alt="" className='frame'/>
+                            <img src={FrameImg} alt="" className='frame'/>
                             <img src={item.image} alt={item.title} className='image'/>
                         </div>
                     </div>
