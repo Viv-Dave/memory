@@ -1,1 +1,31 @@
+body {
+    font-family: "MedievalSharp", cursive;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.medievalsharp-regular {
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+}      
+/* Scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+    background: #36545a; /* Background of the track (the part the scroll thumb slides over) */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #405f68; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #122023; /* Color of the scrollbar thumb when hovered */
+}
+
 

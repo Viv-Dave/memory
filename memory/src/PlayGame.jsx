@@ -1,49 +1,62 @@
 import './style/Card.css';
 import { useState, useEffect } from 'react';
 import array from './CardTemplate';
-export default function PlayGame() {
-    const [count, setCount] = useState(0);
-    let rand = array.sort((ele1, ele2) => Math.random(ele1) - Math.random(ele2));
-    const [clicked, setClicked] = useState(new Array(rand.length).fill(0));
+
+export default function PlayGame({count, setCount}) {
+    const [clicked, setClicked] = useState(new Array(array.length).fill(0));
+    const [shuffledArray, setShuffledArray] = useState([...array].sort(() => Math.random() - 0.5));
+
     useEffect(() => {
         document.title = `You clicked ${count} times`;
-    });
+    }, [count]);
 
-    function handleClick() {
-        setCount(count + 1);
-        rand = array.sort((ele1, ele2) => Math.random(ele1) - Math.random(ele2)); 
-        const id = event.target.id;
-        // clicked[id-1] = clicked[id-1] + 1; 
-        clicked[id-1] += 1;
-        setClicked(clicked); 
-        const title = event.target.title
-        console.log(`${title} and ${clicked[id-1]}`);
-        checkDoubleClick(id);
-        console.log(clicked);
+    function handleClick(event) {
+        const id = parseInt(event.currentTarget.id);
+        const title = event.currentTarget.title;
+        const newClicked = [...clicked];
+        newClicked[id] += 1;
+        const cardElement = event.currentTarget;
+        cardElement.classList.add('closing');
+        if (newClicked[id] > 1) {
+            setClicked(new Array(array.length).fill(0));
+            setCount(0);
+        } else {
+            setCount(count + 1);
+            setClicked(newClicked);
+        }
+        setShuffledArray([...array].sort(() => Math.random() - 0.5));
+        cardElement.classList.remove('closing');
+        cardElement.classList.add('opening');
+
+        setTimeout(() => {
+            cardElement.classList.remove('opening');
+        }, 1000);
+
+        console.log(`${title} and ${newClicked[id]}`);
+        console.log(newClicked);
         console.log(count);
     }
-    function checkDoubleClick(id) {
-        if (clicked[id-1]>1) {
-            setClicked(Array(rand.length).fill(0));
-            setCount(0);
-        }
-    }
-    return ( 
+
+    return (
         <>
-          <div>
-                <p>Current Score: {count}</p>
-            </div>  
+        <div className='card-box'>
             <div className='Card-container'>
-                {rand.map((item, index) => (
-                    <div key={index} className="Card" onClick={() => handleClick(index)} id ={item.id} title = {item.title}>
-                    <div>
-                    <img src="src/BerserkImages/FrameBG.png" alt="" />
-                    <img src={item.image}/>
-                    </div>
-                        {item.title}   
+                {shuffledArray.map((item, index) => (
+                    <div
+                        key={index}
+                        className="Card"
+                        onClick={handleClick}
+                        id={item.id.toString()}
+                        title={item.title}
+                    >
+                        <div>
+                            <img src="src/BerserkImages/RoyalFrameBG.png" alt="" className='frame'/>
+                            <img src={item.image} alt={item.title} className='image'/>
+                        </div>
                     </div>
                 ))}
             </div>
+        </div>
         </>
     );
 }

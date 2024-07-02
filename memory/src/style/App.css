@@ -1,0 +1,20 @@
+.body {
+   border: 1px solid black;
+   align-self: center;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   background-image: url(src/BerserkImages/DarkCastle.jpg);
+   background-size:auto;
+   background-repeat: no-repeat;
+   margin-right: -20px;
+}
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        background-image: url(src/BerserkImages/DarkCastle.jpg);
+        background-size:auto;
+        background-repeat: repeat;
+    }
+  }
